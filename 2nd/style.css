@@ -1,0 +1,104 @@
+@import url("https://cdn.jsdelivr.net/gh/jgthms/minireset.css@master/minireset.min.css");
+
+/*Global Declatations*/
+
+/*piggy pink: #fccfd7
+tropical rain forest:#196435 
+*/
+*{
+    text-decoration: none;
+}
+body{
+    background-color: azure;
+}
+
+
+/*For sidebar*/
+.sidebar{
+    position: fixed;
+    left: -250px;
+    width: 250px;
+    height: 100%;
+    background-color: #267e46;
+    transition: all .5s ease;
+}
+.sidebar header{
+    font-size: 22px;
+    color: azure;
+    text-align: center;
+    line-height: 70px;
+    background: #47a369;
+    user-select: none;
+}
+
+.sidebar ul a{
+    display: block;
+    height: 100%;
+    width: 100%;
+    line-height: 65px;
+    font-size: 25px;
+    color: #dbb3ba;
+    padding-left: 40px;  
+    border-top: 1px solid #1e5332;  
+    border-bottom: 1px solid #143a22;
+    transition: .4s;
+}
+ul li:hover a {
+    padding-left: 50px;
+}
+.sidebar ul a i{
+    margin-right: 16px;
+}
+
+#check{
+    display: none;
+}
+ #btn,#cancel{
+    position: absolute;
+    cursor: pointer;
+    border-radius: 3px;
+    color: azure;
+}
+label #btn{
+    color: #47a369;
+    font-size: 25px;
+    padding: 8px 8px;
+}
+
+label #cancel{
+    z-index: 999;
+    left: -195px;
+    top: 17px;
+    font-size: 30px;
+    padding: 4px 9px;
+    transition: all .5s;
+
+}
+#check:checked ~ .sidebar{
+    left: 0;
+}
+#check:checked ~ label #btn{
+    left: 250px;
+    opacity: 0;
+    pointer-events: none;
+
+}
+#check:checked ~ label #cancel{
+    left: 210px;
+    top: -3px;
+}
+
+/******************MAIN CONTENT***************/
+.main-cont{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.main-cont>section{
+    margin-top: 100px;
+}
+.main-cont h1{
+    font-size: 30px;
+    color: #47a369;
+}
